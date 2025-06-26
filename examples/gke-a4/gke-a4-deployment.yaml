@@ -24,13 +24,13 @@ vars:
 
   # This should be unique across all of your Cluster
   # Toolkit Deployments.
-  deployment_name: us-west3
+  deployment_name: us-west2
 
   # The GCP Region used for this deployment.
-  region: us-west3
+  region: us-west2
 
   # The GCP Zone used for this deployment.
-  zone: us-west3-b
+  zone: us-west2-c
 
   # The number of nodes to be created.
   static_node_count: 0
@@ -44,7 +44,7 @@ vars:
   # <reservation-name>
   # To target a BLOCK_NAME, the name of the extended reservation
   # can be inputted as <reservation-name>/reservationBlocks/<reservation-block-name>
-  reservation: nvidia-b200-lu6zn2clepn8a
+  reservation: nvidia-b200-pkub2xxq348qm
 
   # The disk size of system node pool for this deployment.
   system_node_pool_disk_size_gb: 100
@@ -53,4 +53,4 @@ vars:
   a4_node_pool_disk_size_gb: 25
 
   # The name of the node pool
-  a4_node_pool_name: a4-1
+  node_pool_name: a4-1
