@@ -196,6 +196,7 @@ deployment_groups:
     source: modules/compute/gke-node-pool
     use: [a4-cluster, node_pool_service_account]
     settings:
+      name: $(vars.node_pool_name)
       machine_type: a4-highgpu-8g
       auto_upgrade: true
       zones: [$(vars.zone)]
