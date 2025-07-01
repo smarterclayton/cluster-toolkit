@@ -196,7 +196,7 @@ deployment_groups:
     source: modules/compute/gke-node-pool
     use: [a4-cluster, node_pool_service_account]
     settings:
-      name: $(vars.node_pool_name)
+      name: $(vars.a4_node_pool_name)
       machine_type: a4-highgpu-8g
       auto_upgrade: true
       zones: [$(vars.zone)]
@@ -205,6 +205,8 @@ deployment_groups:
       guest_accelerator:
       - type: $(vars.accelerator_type)
         count: 8
+      placement_policy:
+        type: COMPACT
       reservation_affinity:
         consume_reservation_type: SPECIFIC_RESERVATION
         specific_reservations:
