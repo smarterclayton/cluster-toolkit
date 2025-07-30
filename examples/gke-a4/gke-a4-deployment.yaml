@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# TODO: Define proxy subnet for ILB for IGW
+
 terraform_backend_defaults:
   type: gcs
   configuration:
